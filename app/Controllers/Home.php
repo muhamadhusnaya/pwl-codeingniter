@@ -6,17 +6,12 @@ use function PHPUnit\Framework\returnValueMap;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         return view('homepage');
     }
 
-    public function front()
-    {
-        return view('front');
-    }
-
-    public function hello($name = null): string
+    public function hello($name = null)
     {
         $data['name'] = $name;
         $data['title'] = "Front Page";
